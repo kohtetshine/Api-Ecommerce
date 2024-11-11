@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->bigInteger('type_id')->default(3);
-            $table->bigInteger('login_type_id');
+            $table->string('utype')->default('USR')->comment('USR=USER,ADM=ADMIN');
             $table->rememberToken();
             $table->timestamps();
         });
